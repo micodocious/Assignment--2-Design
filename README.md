@@ -53,3 +53,17 @@ Using the functions above, we implement a queue with an array. In an array imple
 The problem with this psuedocode, is that we cannot keep push numbers into the array anymore because the variables 0 and 1 cannot be used again, but we can make the array into a "circle" and after 9 we go to 0. 
 
 ## Based on what we know about linked lists, design a list data structure that allows us to add (insert) or remove (delete) values at a given location in the list (instead of the top of a stack or the front or back of a queue):
+### 1. What functions are we likely to need for a list to function like this?
+-	Insert a value at a given postion
+head = NULL; //empty list
+insert(2,1); //List: 2
+insert(3,2); //List: 2,3
+insert(4,1); //List 4,2,3
+insert(5,2); //List 4,5,2,3
+
+-	delete a linked list  node at nth position
+Our list is 4,5,2,3
+delete(1); //List: 4,2,3
+Our list is 4,2,3
+delete(0); //List: 2,3
+### 2. What values will we need to know about the structure for our list to function properly?
